@@ -1,0 +1,69 @@
+.techstack-section {
+    padding: 60px 20px;
+    max-width: 1400px;
+    margin: auto;
+    background-color: #fff;
+}
+
+.techstack-title {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 50px;
+}
+
+.techstack-title .highlight {
+    color: #2e80ec;
+}
+
+.tech-group {
+    margin-bottom: 60px;
+    border-top: 1.5px solid #ccc;
+    padding-top: 40px;
+}
+
+.tech-group h4 {
+    font-size: 2.2rem;
+    font-weight: 600;
+    margin-bottom: 25px;
+    color: #000;
+}
+
+.tech-icons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    align-items: center;
+    justify-content: center;
+    animation: fadeInUp 0.6s ease-in-out;
+}
+
+.tech-icons img {
+    height: 60px;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.tech-icons img:hover {
+    transform: scale(1.1);
+}
+
+/* Flip-in animation from AOS */
+[data-aos="flip-up"] {
+    transform-style: preserve-3d;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .tech-icons {
+        gap: 25px;
+    }
+
+    .techstack-title {
+        font-size: 2rem;
+    }
+
+    .tech-icons img {
+        height: 40px;
+    }
+}

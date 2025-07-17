@@ -1,0 +1,71 @@
+/* Industries.css */
+
+.industries-section {
+    padding: 80px 20px;
+    background: #fff;
+    max-width: 1400px;
+    margin: auto;
+    text-align: center;
+}
+
+.industries-title {
+    font-size: 3.2rem;
+    margin-bottom: 55px;
+    font-weight: 600;
+  
+}
+
+.industries-title .highlight {
+    color: #2e80ec;
+}
+
+.industries-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 40px;
+}
+
+.industry-card {
+    background-color: #fff;
+    padding: 20px;
+    text-align: left;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.industry-card .icon {
+    width: 30px;
+    height: 30px;
+    margin-bottom: 9px;
+    color: #2e80ec;
+    filter: brightness(0) saturate(100%) invert(37%) sepia(97%) saturate(684%) hue-rotate(184deg) brightness(92%) contrast(87%);
+}
+
+
+.industry-card h4 {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.industry-card p {
+    font-size: 0.98rem;
+    color: #000;
+    line-height: 1.5;
+}
+
+.industry-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 20px rgba(0, 123, 255, 0.1);
+
+}
+
+@media screen and (max-width: 768px) {
+    .industries-title {
+        font-size: 2rem;
+    }
+
+    .industry-card {
+        text-align: center;
+    }
+}

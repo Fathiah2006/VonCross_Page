@@ -1,0 +1,537 @@
+/* === Fonts === */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 22px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    flex-wrap: wrap;
+    background-color: transparent;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.navbar.scrolled {
+    background-color: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar.scrolled .nav-logo h2  {
+    color: #000;
+}
+
+.navbar.scrolled .nav-links ul li a {
+    color: #000 !important;
+}
+
+
+.navbar.scrolled .nav-links span{
+    color: #000 !important;
+}
+
+.navbar.scrolled svg {
+    color: #000 !important;
+}
+
+
+.navbar .nav-logo h2 {
+    font-size: 20px;
+    font-weight: 700;
+    color: #fff;
+}
+
+.menu-icon {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #fff;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.nav-links ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.nav-links ul li {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    flex-direction: row;
+}
+
+.nav-links ul li a,
+.dropdown-toggle span {
+    color: #fff !important;
+    font-weight: 600;
+    font-size: 16px; 
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+}
+
+.dropdown-toggle  span:hover {
+    color: #ac051b !important;
+
+}
+
+.nav-links ul li a:hover,
+.nav-links ul li.active a {
+    color: #ac051b !important;
+}
+
+.dropdown-toggle {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.dropdown-toggle svg {
+    color: #fff !important;
+    transition: color 0.3s ease;
+}
+
+.dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #000;
+    padding: 10px 0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    min-width: 200px;
+    border-radius: 6px;
+    z-index: 10;
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transform: translateY(-10px);
+    transition: max-height 0.4s ease, opacity 0.4s ease, transform 0.3s ease;
+    flex-direction: column;
+}
+
+.dropdown.show {
+    max-height: 500px;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+
+
+
+.dropdown li {
+    width: 100%;
+}
+
+.dropdown li a {
+    font-size: 14px;
+    color: #000;
+    padding: 6px 12px;
+    display: block;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+.navbar.scrolled .dropdown{
+    background: #fff;
+}
+
+.dropdown li a:hover {
+    color: #ac051b !important;
+}
+
+.rotate {
+    transform: rotate(180deg);
+    transition: transform 0.3s ease;
+}
+
+.contact-btn {
+    margin-left: 20px;
+    padding: 8px 20px;
+    background-color: #ac051b;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.contact-btn:hover {
+    background-color: #8b0416;
+}
+
+@media (max-width: 768px) {
+    .menu-icon {
+        display: block;
+        color: #000;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        width: 100%;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.4s ease;
+        background-color: #fff;
+        color: #000 !important;
+    }
+    .nav-links ul li a{
+        color: #000 !important;
+    }
+
+    .nav-links span {
+        color: #000 !important;
+    }
+
+    
+        .navbar .dropdown-toggle svg {
+            color: #000 !important;
+        }
+
+    .nav-links.show {
+        max-height: 1000px;
+        padding: 10px 0;
+    }
+
+    .nav-links ul {
+        flex-direction: column;
+        width: 100%;
+        padding: 0;
+        gap: 0;
+    }
+
+    .nav-links ul li {
+        width: 100%;
+        border-bottom: 1px solid #eee;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .nav-links ul li a,
+    .dropdown-toggle span {
+        padding: 12px 20px;
+        display: block;
+        width: 100%;
+        color: #000;
+    }
+
+        .dropdown-toggle svg {
+            color: #000;
+            transition: color 0.3s ease;
+        }
+                .navbar .nav-logo h2 {
+                    font-size: 20px;
+                    font-weight: 700;
+                    color: #000;       }
+
+
+    .dropdown {
+        position: static;
+        box-shadow: none;
+        background: transparent;
+        transform: translateY(0);
+        padding-left: 20px;
+    }
+
+    .dropdown li a {
+        color: #000 !important;
+    }
+
+    .dropdown-toggle {
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .contact-btn {
+        margin-top: 10px;
+        margin-left: 0;
+        width: calc(100% - 40px);
+        margin: 10px 20px;
+        text-align: center;
+    }
+
+    .navbar.scrolled .nav-logo h2,
+    .navbar.scrolled .menu-icon {
+        color: #000;
+    }
+
+    .navbar .nav-logo h2, .menu-icon {
+        color: #fff;
+    }
+
+        .dropdown-toggle:hover+.dropdown,
+        .dropdown-toggle:hover~.dropdown,
+        .dropdown:hover {
+            max-height: 400px;
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+
+
+
+}
+
+@media (min-width: 769px) {
+    .mobile-contact {
+        display: none;
+    }
+
+    .dropdown-toggle:hover+.dropdown,
+    .dropdown-toggle:hover~.dropdown,
+    .dropdown:hover {
+        max-height: 500px;
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.mobile-contact {
+    display: none;
+}
+
+.contact-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ac051b;
+    color: #fff;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: pulse 1.3s infinite ease-in-out;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.15);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+/* === Dropdown Styles === */
+
+.dropdown-wrapper {
+  position: relative;
+  max-height: 300px;
+  overflow: hidden;
+}
+
+.services-dropdown {
+  max-height: 300px;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #999 transparent;
+}
+
+.services-dropdown::-webkit-scrollbar {
+  width: 6px;
+}
+.services-dropdown::-webkit-scrollbar-thumb {
+  background: #999;
+  border-radius: 10px;
+}
+.services-dropdown::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.dropdown-wrapper::before,
+.dropdown-wrapper::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 20px;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.dropdown-wrapper::before {
+  top: 0;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), transparent);
+}
+
+.dropdown-wrapper::after {
+  bottom: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.3), transparent);
+}
+
+.dropdown-wrapper.hide-top::before {
+  display: none;
+}
+
+.dropdown-wrapper.hide-bottom::after {
+  display: none;
+}
+
+
+/* === DESKTOP SCROLL STYLES ONLY === */
+@media (min-width: 769px) {
+    .dropdown-wrapper {
+        position: relative;
+        max-height: 300px;
+        overflow: hidden;
+    }
+
+    .services-dropdown {
+        max-height: 300px;
+        overflow-y: auto;
+        scrollbar-width: thin;
+        scrollbar-color: #999 transparent;
+    }
+
+    .services-dropdown::-webkit-scrollbar {
+        width: 6px;
+    }
+
+    .services-dropdown::-webkit-scrollbar-thumb {
+        background: #999;
+        border-radius: 10px;
+    }
+
+    .services-dropdown::-webkit-scrollbar-track {
+        background: transparent;
+    }
+
+    .dropdown-wrapper::before,
+    .dropdown-wrapper::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        height: 20px;
+        z-index: 1;
+        pointer-events: none;
+    }
+
+    .dropdown-wrapper::before {
+        top: 0;
+        background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), transparent);
+    }
+
+    .dropdown-wrapper::after {
+        bottom: 0;
+        background: linear-gradient(to top, rgba(0, 0, 0, 0.3), transparent);
+    }
+
+    .dropdown-wrapper.hide-top::before {
+        display: none;
+    }
+
+    .dropdown-wrapper.hide-bottom::after {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+
+    /* Disable scroll effects and show full dropdown */
+    .dropdown-wrapper {
+        max-height: none !important;
+        overflow: visible !important;
+    }
+
+    .services-dropdown {
+        max-height: none !important;
+        overflow: visible !important;
+    }
+
+    .dropdown-wrapper::before,
+    .dropdown-wrapper::after {
+        display: none !important;
+    }
+}
+
+
+/* === Mobile Contact Message Icon === */
+.mobile-contact {
+    display: none;
+}
+
+.contact-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ac051b;
+    color: #fff;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: pulse 1.3s infinite ease-in-out;
+    text-decoration: none;
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+/* Pulse Animation */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.15);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Show only on mobile */
+@media (max-width: 768px) {
+    .mobile-contact {
+        display: block;
+    }
+
+        .dropdown.services-dropdown-wrapper {
+        max-height: 200px; /* Restores scrolling area */
+        overflow-y: auto;
+        padding-left: 0;
+        background: transparent;
+        border-radius: 0;
+    }
+    .contact-btn {
+        display: none;
+    }
+}
+
+/* Hide message icon on desktop */
+@media (min-width: 769px) {
+    .mobile-contact {
+        display: none;
+    }
+}
+

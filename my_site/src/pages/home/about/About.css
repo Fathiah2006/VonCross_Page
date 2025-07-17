@@ -1,0 +1,153 @@
+.about-section {
+    padding: 0;
+    margin: 0;
+    background-color: #fff;
+    font-family: 'Nunito', sans-serif;
+}
+
+.about-header {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.about-title :hover {
+    border-color: #2e80ec;
+}
+
+.about-title {
+    font-size: 3.1rem;
+    font-weight: 700;
+    color: #003366;
+    margin: 0;
+    border-bottom: 2px solid transparent;
+    transition: border 0.3s;
+}
+
+
+.highlight {
+    color: #2e80ec;
+}
+
+
+.about-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 40px;
+    padding: 40px 20px 60px;
+    max-width: 1200px;
+    margin: auto;
+    align-items: center;
+}
+
+.about-left {
+    flex: 1;
+    min-width: 300px;
+    max-width: 600px;
+}
+
+.about-subtitle {
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.about-description {
+    font-size: 1.1rem;
+    color: #222;
+    line-height: 1.8;
+    margin-bottom: 25px;
+    font-weight: 500;
+}
+
+.about-link {
+    display: inline-block;
+    color: #2e80ec;
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 1rem;
+    border-bottom: 2px solid transparent;
+    transition: border 0.3s;
+}
+
+.about-link:hover {
+    border-color: #2e80ec;
+}
+
+.about-right {
+    flex: 1;
+    min-width: 280px;
+    display: flex;
+    justify-content: center;
+}
+
+.video-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 520px;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.video-wrapper iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 22px;
+    color: white;
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s ease;
+}
+
+.video-thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+}   
+
+.video-thumbnail:hover .play-button {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+
+/* Responsive */
+@media (max-width: 768px) {
+    .about-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-left,
+    .about-right {
+        max-width: 100%;
+    }
+
+    .about-title {
+        font-size: 2rem;
+    }
+
+    .about-subtitle {
+        font-size: 1.2rem;
+    }
+
+    .about-description {
+        font-size: 1rem;
+    }
+}
