@@ -1,7 +1,7 @@
 /* === LetsStartForm.css === */
 
 .lets-start-container {
-    background: linear-gradient(135deg, #06142e, #0e1d45);
+    background: #fff;
     min-height: 100vh;
     display: flex;
     justify-content: center;
@@ -72,6 +72,9 @@
     font-weight: bold;
     display: block;
     margin-top: 5px;
+}
+.contact-email a:hover {
+    color: #fff;
 }
 
 .right-section {

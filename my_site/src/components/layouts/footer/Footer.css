@@ -1,0 +1,108 @@
+.site-footer {
+    color: #fff;
+    padding: 50px 20px 20px;
+    font-family: "Nunito", sans-serif;
+}
+
+.footer-columns {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: space-between;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+.footer-col {
+    flex: 1 1 220px;
+}
+
+.footer-brand {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.footer-col h4 {
+    font-size: 16px;
+    margin-bottom: 15px;
+    color: #eee;
+}
+
+.footer-col ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-col ul li {
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: #ccc;
+}
+
+.footer-col ul li a {
+    color: #ccc;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-col ul li a:hover {
+    color: #fff;
+}
+ .footer-email a {
+    color: #ff4d6d;
+    text-decoration: none;
+}   
+.footer-email a:hover {
+    color: #fff;
+}
+
+.phone-link {
+    color: #ff4d6d;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+.phone-link:hover {
+    color: #fff;
+}
+
+.footer-socials {
+    display: flex;
+    gap: 12px;
+    margin-top: 10px;
+    font-size: 18px;
+    color: #ccc;
+}
+
+.footer-socials svg:hover {
+    color: #fff;
+    cursor: pointer;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid #1d1f2b;
+    margin-top: 40px;
+    font-size: 13px;
+    color: #888;
+}
+
+@media (max-width: 768px) {
+    .footer-columns {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 30px;
+    }
+
+    .footer-col {
+        width: 100%;
+    }
+
+    .footer-bottom {
+        text-align: center;
+    }
+}
